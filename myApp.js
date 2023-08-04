@@ -19,7 +19,16 @@ Person = vare;
 
 
 const createAndSavePerson = (done) => {
-  done(null /*, data*/);
+  var perso = new Person({
+    "name":"Duncan Johanne",
+    "age":24,
+    "favoriteFoods":["Burger", "P.S"]
+  });
+  perso.save((err, data) => {
+    if (err) return console.log(err);
+    done(null, data);
+  })
+  
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
