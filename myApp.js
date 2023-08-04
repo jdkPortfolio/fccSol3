@@ -14,7 +14,9 @@ const personSchema = new mongoose.Schema({
   favoriteFoods: [String]
 });
 
-Person = mongoose.model("Person", personSchema);
+const vare = mongoose.model('Person', personSchema);
+Person = vare;
+
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
