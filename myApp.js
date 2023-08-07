@@ -44,7 +44,7 @@ const createManyPeople = (arrayOfPeople=[
 };
 
 
-const findPeopleByName = (personName = {name:"Duncan"}, done) => {
+const findPeopleByName = (personName = {name:"r@nd0mN4m3"}, done) => {
   vare.find(personName, function(err, data){
     if (err) return console.log(err);
     done(null, data);
