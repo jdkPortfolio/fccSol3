@@ -31,13 +31,24 @@ const createAndSavePerson = (done) => {
   
 };
 
+var arrayOfPeople = [
+  {
+  "name":"Duncan Johanne",
+  "age":24,
+  "favoriteFoods":["Burger", "P.S"]
+},
+{
+  "name":"Duncan Kachasu",
+  "age":25,
+  "favoriteFoods":["Fish", "P.S"]
+}];
+
 const createManyPeople = (arrayOfPeople, done) => {
-  var manyPeople = new Person();
-  manyPeople.create(arrayOfPeople);
-  manyPeople.save((err, data) => {
+  Person.create(arrayOfPeople, (err, data) => {
     if (err) return console.log(err);
     done(null, data);
-  })
+  });
+ 
 };
 
 const findPeopleByName = (personName, done) => {
