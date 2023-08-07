@@ -37,9 +37,9 @@ const createManyPeople = (arrayOfPeople=[
   {name: "Sol", age: 76, favoriteFoods: ["roast chicken"]},
   {name: "Robert", age: 78, favoriteFoods: ["wine"]}
 ], done) => {
-  vare.create(arrayOfPeople, function(err, data) {
+  vare.create(arrayOfPeople, function(err, people) {
     if (err) return console.log(err);
-    done(null, data);
+    done(null, people);
   });
 };
 
